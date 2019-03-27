@@ -22,9 +22,19 @@ namespace RadiSharp.Models
         /// </summary>
         public string StationName { get; set; }
         /// <summary>
-        /// 放送日時
+        /// 放送開始日時
         /// </summary>
-        public DateTime OnAirDateTime { get; set; }
+        public DateTime OnAirStartDateTime { get; set; }
+        /// <summary>
+        /// 放送終了日時
+        /// </summary>
+        public DateTime OnAirEndDateTime
+        {
+            get
+            {
+                return OnAirStartDateTime.Add(OnAirTime);
+            }
+        }
         /// <summary>
         /// 放送時間
         /// </summary>

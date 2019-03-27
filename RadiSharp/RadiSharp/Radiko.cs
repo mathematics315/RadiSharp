@@ -86,7 +86,7 @@ namespace RadiSharp
                                 Title = item2.title,
                                 StationName = item.name,
                                 StationId = item.id,
-                                OnAirDateTime = new DateTime(year, month, day).Add(new TimeSpan(hour, minute, 00)),
+                                OnAirStartDateTime = new DateTime(year, month, day).Add(new TimeSpan(hour, minute, 00)),
                                 OnAirTime = new TimeSpan(0, 0, item2.dur),
                                 InfomationHTML = item2.info
                             };
